@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ajouter une oeuvre</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <form *ngIf="oeuvreForm" [formGroup]="oeuvreForm" (submit)="query()">
+    <ion-item>
+      <ion-label position="floating">Nom de l'oeuvre</ion-label>
+      <ion-input formControlName="name"  type="text" placeholder="nom de l'oeuvre">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Image</ion-label>
+      <ion-input formControlName="image"  type="text" placeholder="image de l'oeuvre">
+      </ion-input>
+    </ion-item>
+    <ion-button expand="block" type="submit" [disabled]="!oeuvreForm.valid">
+      Ajouter une oeuvre
+    </ion-button>
+  </form>
+
+</ion-content>

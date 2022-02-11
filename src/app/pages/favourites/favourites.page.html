@@ -1,0 +1,20 @@
+<ion-content>
+  <ion-card *ngFor="let oeuvre of oeuvres">
+    <div *ngIf="oeuvre.fav">
+      <img [src]="oeuvre.image" [alt]="oeuvre.name">
+      <ion-card-header>
+        <ion-card-title>
+          {{ oeuvre.name }}
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Ajoutée le {{ oeuvre.date | date: 'dd/MM/yyyy' }}</p>
+      </ion-card-content>
+      <ion-chip *ngIf="!oeuvre.fav" (click)="fav(oeuvre.id)">
+        <ion-label>Ajouter aux favoris</ion-label>
+      </ion-chip>
+      <ion-chip *ngIf="oeuvre.fav" (click)="fav(oeuvre.id)">
+        <ion-label>Retirer de mes favoris</ion-label>
+      </ion-chip>
+    </div>
+  </ion-card>

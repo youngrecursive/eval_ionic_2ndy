@@ -1,9 +1,31 @@
 {
-  "posts": [
+  "oeuvres": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "bonjour",
+      "image": "https://picsum.photos/200/300",
+      "lat": "544",
+      "long": "233",
+      "fav": true,
+      "date": "2022-02-11T13:33:31.197Z",
+      "id": 2
+    },
+    {
+      "name": "oeuvre 2",
+      "image": "https://picsum.photos/200/300",
+      "lat": "544",
+      "long": "233",
+      "fav": false,
+      "date": "2022-02-11T16:21:24.467Z",
+      "id": 3
+    },
+    {
+      "name": "test final",
+      "image": "https://picsum.photos/200/300",
+      "lat": "544",
+      "long": "233",
+      "fav": false,
+      "date": "2022-02-11T17:01:14.541Z",
+      "id": 4
     }
   ]
 }
